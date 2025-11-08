@@ -1,8 +1,8 @@
-Commonly, people associate partial function application as the main approach fro dependency injection in F# code. [[mark seeman]] claims that although this works, there is a slight gotcha that can reduce the maintainability of the code. And that comes down to the fact that partial function applications within the context of DI is not 'purely' functional because it smuggles in side effects. The reason this is important is that you, as the developer cannot depice whether a dependency that is being passed in has side effects or not as it has been **abstracted** away from you.
+Commonly, people associate partial function application as the main approach fro dependency injection in F# code. [[mark seeman]] claims that although this works, there is a slight gotcha that can reduce the maintainability of the code. And that comes down to the fact that partial function applications within the context of DI is not 'purely' functional because it smuggles in side effects. The reason this is important is that you, as the developer cannot depict whether a dependency that is being passed in has side effects or not as it has been **abstracted** away from you.
 
 but why should you care whether your dependencies have side effects or not? - because they complect everything by **braiding things together**. it becomes complex. If you ignore complexity, you will slow down. You will invariably slow down over the long haul.
 
-so whats the solution? how can we do dependency injection in F# while staying pure? you completely reject the idea of dependencies.
+so what's the solution? how can we do dependency injection in F# while staying pure? you completely reject the idea of dependencies.
 
 yes, i know. crazy right?
 
